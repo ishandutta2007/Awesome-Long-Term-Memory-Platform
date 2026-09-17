@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Long-Term-Memory-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Long-Term-Memory-Platform?style=flat-square&logo=github&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Long-Term-Memory-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Long-Term-Memory-Platform?style=flat-square&logo=github&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Long-Term-Memory-Platform/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Long-Term-Memory-Platform?style=flat-square&logo=github&color=blue" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Long-Term-Memory-Platform/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Long-Term-Memory-Platform?style=flat-square&color=red" alt="Issues"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Long-Term-Memory-Platform/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a>
@@ -76,7 +76,7 @@ The following table compares leading hosted and managed long-term memory platfor
 
 ## 🔓 Open-Source Memory Frameworks & Vector Engines
 
-The open-source ecosystem is vibrant, offering complete data ownership and local execution capabilities for security-conscious teams. Below is the curated list of top open-source projects, sorted in **descending order by GitHub star count**:
+The open-source ecosystem is vibrant, offering complete data ownership and local execution capabilities for security-conscious teams. Below is the curated list of top open-source projects, sorted in **descending order by GitHub Stars_Count**:
 
 1. **[Redis](https://github.com/redis/redis)** [![Stars](https://img.shields.io/github/stars/redis/redis?style=social&color=white)](https://github.com/redis/redis/stargazers)  
    ⚡ The world's fastest in-memory data store with native vector similarity search, secondary indexing, semantic caching, and pub/sub message brokering for high-throughput AI agent memory.
@@ -200,7 +200,7 @@ We welcome community contributions from developers, researchers, and maintainers
 2. 🌿 **Create a Branch**: `git checkout -b feature/add-new-memory-platform`.
 3. 📝 **Add Your Entry**:
    - For **SaaS**: Include product name, URL, primary focus, company size, starting tier price, and free tier limits.
-   - For **Open-Source**: Include repo link, star badge (`style=social&color=white`), and concise description. Ensure the list remains sorted descending by stars.
+   - For **Open-Source**: Include repo link, Stars_Badge (`style=social&color=white`), and concise description. Ensure the list remains sorted descending by stars.
 4. 🚀 **Submit a Pull Request**: Provide a brief summary of the project and why it belongs in the ecosystem.
 
 Explore the master list of curated resources at [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome).
