@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%" style="background:#090d16; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="50%" stop-color="#0d1322" />
+      <stop offset="100%" stop-color="#0a0e1a" />
+    </linearGradient>
+
+    <!-- Glowing Node Gradients -->
+    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Title Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="45%" stop-color="#a78bfa" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Filter for Drop Shadow & Glow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      /* Dynamic Ambient Pulsing */
+      @keyframes pulseSlow {
+        0%, 100% { opacity: 0.25; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.08); }
+      }
+      @keyframes pulseNode {
+        0%, 100% { r: 5px; opacity: 0.7; }
+        50% { r: 8px; opacity: 1; }
+      }
+      @keyframes floatBeam {
+        0% { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes brainPulse {
+        0%, 100% { transform: translateY(0px) scale(1); opacity: 0.85; }
+        50% { transform: translateY(-4px) scale(1.03); opacity: 1; }
+      }
+      @keyframes shimmer {
+        0% { stop-color: #3b82f6; }
+        50% { stop-color: #8b5cf6; }
+        100% { stop-color: #ec4899; }
+      }
+
+      .bg-pulse-1 {
+        animation: pulseSlow 8s ease-in-out infinite;
+        transform-origin: 200px 100px;
+      }
+      .bg-pulse-2 {
+        animation: pulseSlow 10s ease-in-out infinite reverse;
+        transform-origin: 1000px 300px;
+      }
+      .synapse-line {
+        stroke-dasharray: 8, 12;
+        animation: floatBeam 25s linear infinite;
+      }
+      .synapse-fast {
+        stroke-dasharray: 12, 16;
+        animation: floatBeam 14s linear infinite;
+      }
+      .p-node {
+        animation: pulseNode 3s ease-in-out infinite;
+      }
+      .brain-glow {
+        animation: brainPulse 4s ease-in-out infinite;
+        transform-origin: 600px 125px;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas Background -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" />
+
+  <!-- Grid Pattern (Subtle) -->
+  <g opacity="0.07" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="70" x2="1200" y2="70" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+    <line x1="0" y1="350" x2="1200" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="450" y1="0" x2="450" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="750" y1="0" x2="750" y2="420" />
+    <line x1="900" y1="0" x2="900" y2="420" />
+    <line x1="1050" y1="0" x2="1050" y2="420" />
+  </g>
+
+  <!-- Ambient Dynamic Glowing Orbs in Background -->
+  <circle cx="220" cy="120" r="180" fill="url(#glowPurple)" class="bg-pulse-1" />
+  <circle cx="980" cy="280" r="220" fill="url(#glowCyan)" class="bg-pulse-2" />
+  <circle cx="600" cy="210" r="260" fill="url(#glowBlue)" opacity="0.2" />
+
+  <!-- Neural Constellation / Memory Synapses Network (Dynamic Background) -->
+  <g opacity="0.55">
+    <!-- Synapse Paths -->
+    <path d="M 60,80 Q 240,160 380,90 T 700,110 T 1000,60 T 1140,130" fill="none" stroke="#6366f1" stroke-width="1.8" class="synapse-line" />
+    <path d="M 100,340 Q 280,240 450,310 T 820,290 T 1120,340" fill="none" stroke="#06b6d4" stroke-width="1.8" class="synapse-fast" />
+    <path d="M 120,100 L 220,220 L 340,160 L 480,260 L 620,170 L 780,250 L 920,150 L 1060,240" fill="none" stroke="#8b5cf6" stroke-width="1.2" stroke-dasharray="6,6" opacity="0.4" />
+    <path d="M 220,220 L 180,330 L 320,360 L 450,310 L 580,370 L 720,310 L 880,360 L 1020,310" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,4" opacity="0.3" />
+
+    <!-- Network Graph Nodes -->
+    <circle cx="60" cy="80" r="5" fill="#a78bfa" class="p-node" />
+    <circle cx="240" cy="160" r="6" fill="#38bdf8" />
+    <circle cx="380" cy="90" r="5" fill="#c084fc" class="p-node" style="animation-delay: 1s;" />
+    <circle cx="700" cy="110" r="6" fill="#818cf8" />
+    <circle cx="1000" cy="60" r="5" fill="#38bdf8" class="p-node" style="animation-delay: 1.5s;" />
+    <circle cx="1140" cy="130" r="6" fill="#f472b6" />
+
+    <circle cx="100" cy="340" r="6" fill="#06b6d4" />
+    <circle cx="280" cy="240" r="5" fill="#a855f7" class="p-node" style="animation-delay: 0.5s;" />
+    <circle cx="450" cy="310" r="7" fill="#60a5fa" />
+    <circle cx="820" cy="290" r="6" fill="#2dd4bf" class="p-node" style="animation-delay: 2s;" />
+    <circle cx="1120" cy="340" r="5" fill="#38bdf8" />
+  </g>
+
+  <!-- FOREGROUND LAYER (Purely Clear & Unobstructed) -->
+  <g filter="url(#shadow)">
+    <!-- Central Icon / Logo Glow -->
+    <g class="brain-glow">
+      <!-- Neural Core Ring -->
+      <circle cx="600" cy="100" r="46" fill="#1e1b4b" stroke="#6366f1" stroke-width="2.5" opacity="0.9" />
+      <circle cx="600" cy="100" r="54" fill="none" stroke="#06b6d4" stroke-width="1.2" stroke-dasharray="6, 6" opacity="0.7" />
+      
+      <!-- Brain Icon Symbol (SVG) -->
+      <path d="M 586 86 C 580 86 574 91 574 97 C 570 98 566 102 566 107 C 566 112 570 116 574 117 C 574 122 578 126 583 126 C 587 126 590 124 592 121 C 594 123 597 124 600 124 C 603 124 606 123 608 121 C 610 124 613 126 617 126 C 622 126 626 122 626 117 C 630 116 634 112 634 107 C 634 102 630 98 626 97 C 626 91 620 86 614 86 C 610 86 606 88 604 92 C 602 90 598 89 596 89 C 594 87 590 86 586 86 Z M 597 93 L 597 121 M 603 93 L 603 121" 
+            fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="587" cy="104" r="3" fill="#a78bfa" />
+      <circle cx="613" cy="104" r="3" fill="#a78bfa" />
+      <circle cx="600" cy="94" r="2.5" fill="#f472b6" />
+    </g>
+
+    <!-- Top Pre-heading Category Pill -->
+    <g transform="translate(470, 168)">
+      <rect width="260" height="26" rx="13" fill="#1e293b" stroke="#475569" stroke-width="1" opacity="0.95" />
+      <text x="130" y="17" fill="#38bdf8" font-size="11.5" font-weight="700" letter-spacing="1.5" text-anchor="middle">
+        AI AGENT MEMORY ECOSYSTEM
+      </text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="232" text-anchor="middle" font-size="44" font-weight="900" fill="url(#textGrad)" letter-spacing="-0.5" filter="url(#textGlow)">
+      Awesome Long-Term Memory Platform
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="272" text-anchor="middle" font-size="16.5" font-weight="500" fill="#cbd5e1" letter-spacing="0.2">
+      Curated Landscape of Persistent Context, Temporal Graphs, Vector Stores &amp; Agent Runtimes
+    </text>
+
+    <!-- Feature Feature Badges / Highlights -->
+    <g transform="translate(190, 315)">
+      <!-- Pill 1: Agent Memory -->
+      <g transform="translate(0, 0)">
+        <rect width="180" height="38" rx="19" fill="#0f172a" stroke="#6366f1" stroke-width="1.2" />
+        <text x="90" y="23.5" fill="#e2e8f0" font-size="13" font-weight="600" text-anchor="middle">
+          🧠 Stateful Agents
+        </text>
+      </g>
+
+      <!-- Pill 2: Temporal Graphs -->
+      <g transform="translate(205, 0)">
+        <rect width="195" height="38" rx="19" fill="#0f172a" stroke="#06b6d4" stroke-width="1.2" />
+        <text x="97.5" y="23.5" fill="#e2e8f0" font-size="13" font-weight="600" text-anchor="middle">
+          🕸️ Knowledge Graphs
+        </text>
+      </g>
+
+      <!-- Pill 3: Vector Databases -->
+      <g transform="translate(425, 0)">
+        <rect width="195" height="38" rx="19" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.2" />
+        <text x="97.5" y="23.5" fill="#e2e8f0" font-size="13" font-weight="600" text-anchor="middle">
+          ⚡ Vector Databases
+        </text>
+      </g>
+
+      <!-- Pill 4: Cross-Session Recall -->
+      <g transform="translate(645, 0)">
+        <rect width="185" height="38" rx="19" fill="#0f172a" stroke="#ec4899" stroke-width="1.2" />
+        <text x="92.5" y="23.5" fill="#e2e8f0" font-size="13" font-weight="600" text-anchor="middle">
+          💾 Cross-Session Recall
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Subtle Bottom Border Accent Line -->
+  <rect x="0" y="416" width="1200" height="4" fill="url(#textGrad)" />
+</svg>
