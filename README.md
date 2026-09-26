@@ -132,6 +132,9 @@ The open-source ecosystem is vibrant, offering complete data ownership and local
 18. **[LangMem](https://github.com/langchain-ai/langmem)** [![Stars](https://img.shields.io/github/stars/langchain-ai/langmem?style=social&color=white)](https://github.com/langchain-ai/langmem/stargazers)  
     🦜 Specialized memory library by LangChain designed to extract, maintain, and inject long-term user memories into stateful LangGraph agents and multi-agent workflows.
 
+19. **[Hyperconsciousness](https://github.com/louis030195/hyperconsciousness)** [![Stars](https://img.shields.io/github/stars/louis030195/hyperconsciousness?style=social&color=white)](https://github.com/louis030195/hyperconsciousness/stargazers)
+    🔐 MIT-licensed Rust developer alpha for encrypted, append-only knowledge, device sync, and MCP access through scoped, expiring grants. Build from source.
+
 ---
 
 ## 🏛️ Architectural Memory Paradigms
